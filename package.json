@@ -32,7 +32,7 @@
         "kettle": "1.11.0",
         "markdown-it": "10.0.0",
         "moment": "2.24.0",
-        "ul-api": "1.0.0-dev.20210413T091744Z.bfa8131.legacy-infusion",
+        "ul-api": "1.0.0-dev.20210915T110329Z.d5b055d.eastin-integration",
         "ul-imports": "1.0.0-dev.20210413T111504Z.c56b898.legacy-infusion"
     },
     "devDependencies": {
