@@ -6,6 +6,7 @@ version: "3.2"
 services:
   ul-website:
     image: ul-website
+    pull_policy: always
     build:
       context: .
       dockerfile: Dockerfile
