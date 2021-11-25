@@ -32,13 +32,13 @@
         "kettle": "1.11.0",
         "markdown-it": "10.0.0",
         "moment": "2.24.0",
-        "ul-api": "1.0.0-dev.20210915T110329Z.d5b055d.eastin-integration",
-        "ul-imports": "1.0.0-dev.20210413T111504Z.c56b898.legacy-infusion"
+        "ul-api": "1.0.0-dev.20211108T093728Z.933b106.eastin-integration",
+        "ul-imports": "1.0.0-dev.20210928T110407Z.f5a1f92.post-eastin"
     },
     "devDependencies": {
         "eslint": "6.5.1",
         "eslint-config-fluid": "1.4.0",
-        "gpii-couchdb-test-harness": "1.0.0-dev.20190827T101451Z.024d2c3.GPII-3531",
+        "gpii-couchdb-test-harness": "1.0.1",
         "gpii-grunt-lint-all": "1.0.5",
         "gpii-webdriver": "1.1.0",
         "grunt": "1.0.4",
