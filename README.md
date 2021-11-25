@@ -12,8 +12,10 @@ standalone service using a command like:
 
 ## Running Using `docker-compose`
 
-If you just want to run everything and output all server log messages to the console, you can do so using a command
-like:
+Before you can run using `docker-compose`, you will need to create `/srv` and all of the subdirectories referenced in
+the [`docker-compose.yml` file](./docker-compose.yml) in this repository.
+
+Once those installation steps are complete, you can start the UL API with live server log messages using a command like:
 
 `docker-compose up`
 
@@ -27,7 +29,11 @@ or stop and remove all containers using a command like:
 
 `docker-compose down`
 
-For additional options, consult the `docker` and `docker-compose` documentation.
+For additional options, consult the [`docker`](https://www.docker.com) and [`docker-compose`](https://docs.docker.com/compose/) documentation.
+
+Please note:  The first time you run, you will also need to synchronis the database
+[as described here](./docs/syncing-couchdb.md).  
+
 
 ## Configuration Files Required for Docker
 
@@ -73,3 +79,6 @@ rm -rf node_modules/*
 NODE_ENV=production npm install
 docker-compose build ul-imports
 ```
+## More Information
+
+For a more detailed breakdown on executing common maintenance tasks, see [the operations handbook](./docs/operations.md).
