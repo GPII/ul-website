@@ -1,0 +1,11 @@
+{{#if message}}
+    <p>The following updates match the selected options.</p>
+
+    {{#each message}}
+        {{>product-listing}}
+    {{/each}}
+{{else}}
+    <div class="panel">
+        No differences were found matching the selected options.
+    </div>
+{{/if}}

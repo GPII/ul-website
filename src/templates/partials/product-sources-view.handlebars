@@ -1,0 +1,18 @@
+{{#if sources}}
+  <ul>
+    {{#each sources}}
+      <li{{#equals status "deleted"}} class="ul-deleted"{{/equals}}>
+          {{source}} :
+          {{#if sourceUrl}}
+              {{#equals status "deprecated"}}
+                  <a href="/api/product/{{source}}/{{sid}}" target="_blank">View our cached copy of the source record.</a>
+              {{else}}
+                  <a href="{{sourceUrl}}" target="_blank">View on the original site.</a>
+              {{/equals}}
+          {{else}}
+              <a href="/api/product/{{source}}/{{sid}}" target="_blank">View our cached copy.</a>
+          {{/if}}
+      </li>
+    {{/each}}
+  </ul>
+{{/if}}

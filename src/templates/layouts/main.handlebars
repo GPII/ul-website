@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Unified Listing API</title>
+    {{>common-includes}}
+  </head>
+  <body>
+    <a class="topbar-skip-link" href="#main" tabindex="0">Skip to Main Content</a>
+
+    {{{body}}}
+
+    {{> common-footer}}
+
+    <script type="text/javascript">
+        // Initialise Foundation.
+        $(document).foundation();
+
+        // Initialise the UIOptions panel.
+        $(document).ready(function () {
+            fluid.uiOptions.prefsEditor(".flc-prefsEditor-separatedPanel", {
+                lazyLoad: true,
+                terms: {
+                    "templatePrefix": "/modules/infusion/src/framework/preferences/html",
+                    "messagePrefix": "/modules/infusion/src/framework/preferences/messages"
+                },
+                "tocTemplate": "/modules/infusion/components/tableOfContents/html/TableOfContents.html",
+                "ignoreForToC": {
+                    "overviewPanel": ".flc-overviewPanel"
+                }
+            });
+        });
+    </script>
+  </body>
+</html>

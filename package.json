@@ -1,0 +1,49 @@
+{
+    "name": "ul-website",
+    "version": "1.0.0-dev.20181205T110329Z.ef38cad",
+    "description": "This package provides the web site as well as the manufacturer and contributor interface to the Unified Listing.",
+    "main": "index.js",
+    "scripts": {
+        "pretest": "node node_modules/rimraf/bin.js reports/* instrumented/* coverage/* && node node_modules/istanbul/lib/cli.js instrument --no-compact --output instrumented src",
+        "test": "node node_modules/istanbul/lib/cli.js cover tests/all-tests.js --report none --print none",
+        "posttest": "node node_modules/istanbul/lib/cli.js report --root coverage --dir reports text-summary html"
+    },
+    "repository": "https://github.com/GPII/ul-website.git",
+    "author": "Tony Atkins <tony@raisingthefloor.org>",
+    "license": "BSD-3-Clause",
+    "bugs": {
+        "url": "https://issues.gpii.net/browse/UL"
+    },
+    "homepage": "https://github.com/GPII/ul-website",
+    "dependencies": {
+        "ajv": "6.10.2",
+        "foundation-sites": "6.3.1",
+        "gpii-binder": "1.0.6",
+        "gpii-express": "1.0.15",
+        "gpii-express-user": "1.0.2-dev.20191014T143404Z.150969f.GPII-3921",
+        "gpii-handlebars": "2.1.0-dev.20191014T141924Z.45a74ef.GPII-4100",
+        "gpii-json-schema": "2.1.2-dev.20191014T143306Z.8a372f7.GPII-4022",
+        "gpii-launcher": "1.0.0-dev.20170712T140305Z.aa60d4a",
+        "gpii-location-bar-relay": "1.0.4",
+        "gpii-sort": "1.0.0-dev.20170420T114825Z.804ac19",
+        "handlebars": "4.4.3",
+        "infusion": "3.0.0-dev.20191009T141140Z.32c9263b4.FLUID-6148",
+        "jquery": "3.4.1",
+        "kettle": "1.11.0",
+        "markdown-it": "10.0.0",
+        "moment": "2.24.0",
+        "ul-api": "1.0.0-dev.20211108T093728Z.933b106.eastin-integration",
+        "ul-imports": "1.0.0-dev.20210928T110407Z.f5a1f92.post-eastin"
+    },
+    "devDependencies": {
+        "eslint": "6.5.1",
+        "eslint-config-fluid": "1.4.0",
+        "gpii-couchdb-test-harness": "1.0.1",
+        "gpii-grunt-lint-all": "1.0.5",
+        "gpii-webdriver": "1.1.0",
+        "grunt": "1.0.4",
+        "istanbul": "0.4.5",
+        "node-jqunit": "1.1.8",
+        "rimraf": "3.0.0"
+    }
+}

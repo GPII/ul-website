@@ -1,0 +1,11 @@
+node_modules
+.idea/
+coverage
+instrumented
+reports
+package-lock.json
+# Docker environment variables for UL import usernames/passwords.
+.docker-env-ul-imports
+# Docker environment variables for CouchDB
+.docker-env-couchdb
+.docker-env-mail

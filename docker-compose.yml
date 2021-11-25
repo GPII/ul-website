@@ -1,0 +1,79 @@
+# Build the full suite of containers required to serve up and maintain the UL API
+#
+# Usage: `docker-compose up`
+version: "3.2"
+
+services:
+  ul-website:
+    image: ul-website
+    pull_policy: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+    - .docker-env-mail
+    depends_on:
+      - couchdb-lucene
+      - couchdb
+    ports:
+      - "4896:4896"
+    volumes:
+      - type: bind
+        source: /srv/ul-images
+        target: /srv/ul-images
+      - type: bind
+        source: /srv/ul-updates-reports
+        target: /srv/ul-updates-reports
+    restart: unless-stopped
+
+  # This must use this alias in order for couchdb-lucene to use it with its default options.
+  couchdb:
+    image: couchdb:2.2
+    ports:
+      - "5984:5984"
+    env_file:
+      - .docker-env-couchdb
+    volumes:
+      - type: bind
+        source: /srv/docker-couchdb_data
+        target: /opt/couchdb/data
+    restart: unless-stopped
+
+  couchdb-lucene:
+    image: klaemo/couchdb-lucene:2.1.0
+    ports:
+      - "5985:5985"
+    depends_on:
+      - couchdb
+    restart: unless-stopped
+
+  # A "task" container which starts and immediately exits on composition build.
+  # Use `docker-compose run ul-imports <npm script>` to run this container.
+  ul-imports:
+    # NOTE: You are expected to build the ul-imports container manually using a command like:
+    #
+    # `docker build -t ul-imports:latest .`
+    #
+    # You can either do this from the version installed as one of our dependencies, or from your own checkout
+    # of that repository.
+    image: ul-imports:latest
+    env_file:
+      - .docker-env-ul-imports
+      - .docker-env-mail
+    depends_on:
+      - couchdb
+      - ul-website
+    command: noop
+    volumes:
+      - type: bind
+        source: /srv/ul-diffs
+        target: /srv/ul-diffs
+      - type: bind
+        source: /srv/ul-images
+        target: /srv/ul-images
+      - type: bind
+        source: /srv/ul-import-output
+        target: /srv/ul-import-output
+      - type: bind
+        source: /srv/ul-updates-reports
+        target: /srv/ul-updates-reports

@@ -1,0 +1,35 @@
+<form>
+    <!-- date picker -->
+    <label id="updates-updatedSince-control-label">
+        Show records updated since:
+    </label>
+    <input type="date" aria-labelledby="updates-updatedSince-control-label" class="ul-updates-updatedSince-control"/>
+
+    <!-- choose databases -->
+    <label id="updates-sources-control-label">
+        Show differences between unified record and these sources:
+    </label>
+    <select multiple="true" aria-labelledby="updates-sources-control-label" class="ul-updates-sources-control" size="{{sources.length}}">
+        {{#each sources}}<option value="{{.}}" selected="true">{{.}}</option>{{/each}}
+    </select>
+
+    <!-- Whether to show records newer or older than the source -->
+    <fieldset>
+        <legend>Show unified records:</legend>
+
+        <ul class="no-bullet">
+            <li>
+                <input type="radio" id="source-newer-true" name="ul-updates-sourceNewer-control" value="true"/>
+                <label for="source-newer-true">
+                    older than the source records.
+                </label>
+            </li>
+            <li>
+                <input type="radio" id="source-newer-false" name="ul-updates-sourceNewer-control" value="false"/>
+                <label for="source-newer-false">
+                    newer than the source records.
+                </label>
+            </li>
+        </ul>
+    </fieldset>
+</form>

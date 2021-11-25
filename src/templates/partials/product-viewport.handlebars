@@ -1,0 +1,26 @@
+<!-- The main body -->
+
+<div class="product-viewport">
+    <div class="product-view">
+        {{>product-view}}
+    </div>
+
+    <div class="product-view-control-panel">
+        <div class="row">
+            <div class="column medium-offset-8 medium-2 small-12 right">
+                <button class="product-edit-button product-toggle expanded button" style="display:none;">Edit Record</button>
+            </div>
+            <div class="column medium-2 small-12 right">
+                {{#equals product.source "unified"}}
+                    {{#if user}}
+                        <a class="button expanded" href="/suggest/{{product.uid}}">Suggest a Change</a>
+                    {{else}}
+                        <a href="/api/user/login" class="button expanded">Log in to Suggest a Change</a>
+                    {{/if}}
+                {{/equals}}
+            </div>
+        </div>
+    </div>
+
+    <div class="product-edit" style="display: none"/>
+</div>

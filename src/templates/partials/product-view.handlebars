@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="column medium-6 small-12">
+      <h3>{{#if product.name}}{{product.name}}{{else}}No Product Name Listed{{/if}}</h3>
+    </div>
+    <div class="column medium-6 small-12">
+      Status: {{product.status}}
+    </div>
+</div>
+
+<div class="row">
+    <div class="column medium-9 small-12">
+        <div class="panel">
+            <h3>Description</h3>
+
+            {{{product.description}}}
+        </div>
+    </div>
+    <div class="column medium-3 small-12">
+        <div class="ul-gallery-holder"></div>
+    </div>
+</div>
+
+
+<h3>Manufacturer</h3>
+
+{{>product-manufacturer-view product.manufacturer}}
+
+{{#equals product.source "unified"}}
+    {{#if product.sources}}
+        <h3>Sources</h3>
+
+        {{>product-sources-view product}}
+    {{/if}}
+{{else}}
+    {{#if sourceUrl}}
+        <a href="{{sourceUrl}}" target="_blank">View on the original site.</a>
+    {{/if}}
+    {{#if product.uid}}
+        <p><a href="/api/product/unified/{{product.uid}}">View the unified record related to this product.</a></p>
+    {{/if}}
+{{/equals}}
