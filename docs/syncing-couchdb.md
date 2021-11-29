@@ -1,4 +1,4 @@
-## Syncing CouchDB
+# Syncing CouchDB
 
 When performing local QA, it is expected that you test as much as possible with live data. This document covers
 synchronising your local data with the live instance.  You'll want to remove any existing data to avoid conflicts
@@ -13,7 +13,7 @@ that would result from changes made in local testing.
    1. Navigate to the "Replication" page in Fauxton
    2. Click "New Replication".
    3. Under "Source"
-      1. Set the "Type" to "Remote Database" 
+      1. Set the "Type" to "Remote Database"
       2. On OS X, the database URL is something like `https://docker.for.mac.localhost:15984/ul`.  For other
          platforms [see this issue](https://github.com/docker/for-linux/issues/264#issuecomment-966221821).
       3. Set the "Authentication" to "Username and password" and enter each.

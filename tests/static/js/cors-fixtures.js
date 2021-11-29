@@ -1,5 +1,4 @@
 // Test fixtures to confirm that our CORS headers work in actual browsers.
-/* globals fluid, $, XMLHttpRequest */
 (function () {
     "use strict";
     var gpii = fluid.registerNamespace("gpii");
