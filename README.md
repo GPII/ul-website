@@ -1,4 +1,4 @@
-p# UL API web site.
+# UL API web site.
 
 This repository contains the client-side code for the UL API web site, and the Docker files required to build and launch
 it in production.
@@ -29,11 +29,11 @@ or stop and remove all containers using a command like:
 
 `docker-compose down`
 
-For additional options, consult the [`docker`](https://www.docker.com) and [`docker-compose`](https://docs.docker.com/compose/) documentation.
+For additional options, consult the [`docker`](https://www.docker.com) and [`docker-compose`](https://docs.docker.com/compose/)
+documentation.
 
 Please note:  The first time you run, you will also need to synchronis the database
 [as described here](./docs/syncing-couchdb.md).  
-
 
 ## Configuration Files Required for Docker
 
@@ -79,6 +79,8 @@ rm -rf node_modules/*
 NODE_ENV=production npm install
 docker-compose build ul-imports
 ```
+
 ## More Information
 
 For a more detailed breakdown on executing common maintenance tasks, see [the operations handbook](./docs/operations.md).
+If you need to make code changes, see the [contribution guidelines](./docs/contributing.md).

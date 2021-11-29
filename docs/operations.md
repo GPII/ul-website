@@ -5,7 +5,7 @@ This document is intended to act as a reference for various maintenance tasks re
 
 ## Background
 
-The Unified Listing API was developed as a companion effort to the GPII (now Morphic).  It is written using
+The Unified Listing API was developed as a companion effort to the GPII.  It is written using
 [Infusion](https://docs.fluidproject.org/infusion/development/), a Javascript framework that runs both in
 [Node.js](https://nodejs.org/en/) and in the browser.  The data stored in the Unified Listing API is housed in
 [CouchDB](http://couchdb.apache.org).  This data is indexed for searches using
