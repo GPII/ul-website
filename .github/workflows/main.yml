@@ -33,4 +33,4 @@ jobs:
         run: npm test
 
       - name: Lint Code
-        run: $(npm bin)/grunt lint
+        run: npm run lint
