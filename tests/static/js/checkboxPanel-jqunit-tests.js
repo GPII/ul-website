@@ -1,5 +1,4 @@
 // Test fixtures to confirm that our checkbox panel works in browsers.
-/* globals fluid */
 (function () {
     "use strict";
 

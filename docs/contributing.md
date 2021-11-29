@@ -18,4 +18,4 @@ A pull request is more likely to be accepted if it:
 2. Does not break any tests.
 3. Includes tests for any new functionality, so that the code coverage remains high.
 4. Passes all linting checks.  This sometimes involves reformatting code to match the existing style.  It can also
-   involve discussing and making changes to the linting checks. 
+   involve discussing and making changes to the linting checks.

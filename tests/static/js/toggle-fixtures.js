@@ -1,5 +1,4 @@
 // Test fixtures for the "toggle" functional tests.
-/* globals fluid */
 (function () {
     "use strict";
 

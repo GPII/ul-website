@@ -1,5 +1,5 @@
 // Test fixtures to confirm that our CORS headers work in actual browsers.
-/* globals fluid, jqUnit, QUnit, $ */
+/* globals QUnit, jqUnit */
 (function () {
     "use strict";
     var gpii = fluid.registerNamespace("gpii");
