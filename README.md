@@ -3,12 +3,23 @@
 This repository contains the client-side code for the UL API web site, and the Docker files required to build and launch
 it in production.
 
-## Running Standalone
+## Installation
 
-If you already have your own CouchDB, couchdb-lucene, and mail server, you can just run the website and API as a
-standalone service using a command like:
+### Prerequisites
 
-`node ./launch.ul.js`
+To work with this package, you will need to have the following installed:
+
+1. [Node.js](https://nodejs.org/en/) (currently we run using node@12)
+2. `npm`
+3. [Docker](https://www.docker.com).
+
+### Installing Dependencies
+
+To install the dependencies required to run standalone or run tests, run `npm install` from the root of the repository.
+
+## Running the Tests
+
+To run the tests associated with this package, run `npm test` from the root of the repository.
 
 ## Running Using `docker-compose`
 
@@ -79,6 +90,17 @@ rm -rf node_modules/*
 NODE_ENV=production npm install
 docker-compose build ul-imports
 ```
+
+## Running Standalone
+
+If you already have your own CouchDB, couchdb-lucene, and mail server, you can just run the website and API as a
+standalone service using a command like:
+
+`node ./launch.ul.js`
+
+## Running Tests
+
+To run the tests in this package, run `npm test`.
 
 ## More Information
 
