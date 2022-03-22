@@ -25,7 +25,7 @@ To run the tests associated with this package, run `npm test` from the root of t
 
 Before you can run using `docker-compose`, you will need to create `/srv` and all of the subdirectories referenced in
 the [`docker-compose.yml` file](./docker-compose.yml) in this repository.  You will also need to ensure that you have
-built the required ul-website and ul-imports containers, see the [Deployment documentation](./docs/deploying-updates.md)
+built the required ul-website and ul-imports containers, see the [deployment documentation](./docs/deploying-updates.md)
 for details.
 
 Once those installation steps are complete, you can start the UL API with live server log messages using a command like:
