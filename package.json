@@ -32,7 +32,7 @@
         "kettle": "1.11.0",
         "markdown-it": "10.0.0",
         "moment": "2.24.0",
-        "ul-api": "1.0.0-dev.20211108T093728Z.933b106.eastin-integration",
+        "ul-api": "1.0.0-dev.20220209T123355Z.8554d99.main",
         "ul-imports": "1.0.0-dev.20210928T110407Z.f5a1f92.post-eastin"
     },
     "devDependencies": {
