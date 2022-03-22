@@ -6,7 +6,7 @@ Before deploying changes, you are expected to test them locally by rebuilding th
 
 To rebuild the ul-website container, run a command like the following from the root of this repository:
 
-```
+```shell
 docker build . -t ul-website:latest
 ```
 
@@ -15,7 +15,7 @@ To rebuild the ul-imports container, [see the documentation in the ul-imports re
 Once you have a new container image to test, you can deploy it locally using commands like the following from the root
 of this repository:
 
-```
+```shell
 docker-compose down
 docker-compose up -d.
 ```
@@ -40,7 +40,7 @@ website functions as expected:
 Once you are satisfied that the updated container(s) are working as expected, you will need to copy the container
 image to production.  From your local machine, save the updated container(s) using commands like:
 
-```console
+```shell
 docker save ul-website | gzip > /tmp/ul-website.tar.gz
 docker save ul-imports | gzip > /tmp/ul-imports.tar.gz
 scp /tmp/ul-*.tar.gz ul-vm:
@@ -48,7 +48,7 @@ scp /tmp/ul-*.tar.gz ul-vm:
 
 You'll then need to SSH to the ul-vm, and run commands like the following:
 
-```
+```shell
 gunzip ul-website.tar.gz
 sudo docker import ul-website
 cd /srv/ul-website
